@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">ActivityPlugin</string>
+    <string name="module_name">Activity</string>
+    <string name="tr_name">Set strings</string>
+    <string name="pe_name">Notify</string>
+    <string name="parameter_name">Strings</string>
+    <string name="parameter_name_ifnull"></string>
+
+</resources>
