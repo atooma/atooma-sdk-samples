@@ -15,13 +15,13 @@ import com.atooma.plugin.Performer;
 public class PE_SendNotification extends Performer {
 
 	public PE_SendNotification(Context context, String id, int version) {
-		super(context, id, version);
+		super(context, id, version);      
 	}
 
 	@Override
 	public void defineUI() {
 		setIcon(R.drawable.plugin_icon_normal, R.drawable.plugin_icon_pressed);
-		setTitle(R.string.pe_send_notification_title);
+		setTitle(R.string.pe_send_notification_title);  
 	}
 
 	@Override

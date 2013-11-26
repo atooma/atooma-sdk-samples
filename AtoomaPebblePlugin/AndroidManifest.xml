@@ -12,13 +12,13 @@
         android:allowBackup="true">
         <service android:name="com.atooma.AtoomaService" android:process=":remote"/>
 
-        <receiver android:name=".PEBBLERegister" >
+        <receiver android:name=".PEBBLEReceiver" >
             <intent-filter>
                 <action android:name="com.atooma.plugin.REGISTRATION" />
             </intent-filter>
         </receiver>
 
-        <service android:name="com.atooma.sdk.RegisterService"/>
+        <service android:name=".PEBBLERegister"/>
     </application>
 
 </manifest>
