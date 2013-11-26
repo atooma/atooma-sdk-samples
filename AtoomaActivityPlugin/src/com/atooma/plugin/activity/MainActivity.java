@@ -33,10 +33,9 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				String[] arrayString = new String[1];
-				arrayString[0] = greetings[spinner.getSelectedItemPosition()];
+				String string = greetings[spinner.getSelectedItemPosition()];
 				Intent intent = new Intent();
-				intent.putExtra(AtoomaParams.ACTIVITY_RESULT_KEY, arrayString);
+				intent.putExtra(AtoomaParams.ACTIVITY_RESULT_KEY, string);
 				setResult(RESULT_OK, intent);
 				finish();
 			}

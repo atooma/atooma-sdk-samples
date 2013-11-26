@@ -28,14 +28,13 @@ public class PE_Notification extends Performer {
 
 	@Override
 	public ParameterBundle onInvoke(String ruleId, ParameterBundle parameters) throws RemoteException {
-		final String[] text = (String[]) parameters.get("STRINGS");
+		final String text = (String) parameters.get("STRINGS");
 		Handler handler = new Handler(Looper.getMainLooper());
 		handler.post(new Runnable() {
 			public void run() {
-				Toast.makeText(getContext(), text[0], Toast.LENGTH_LONG).show();
+				Toast.makeText(getContext(), text, Toast.LENGTH_LONG).show();
 			}
 		});
 		return null;
 	}
-
 }
