@@ -1,5 +1,5 @@
 
-package com.atooma.plugin.transmissionatoomamodule;
+package com.atooma.plugin.transmission;
 
 import com.atooma.sdk.AtoomaRegistrationReceiver;
 

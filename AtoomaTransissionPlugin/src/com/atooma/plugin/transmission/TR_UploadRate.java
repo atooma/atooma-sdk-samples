@@ -1,4 +1,4 @@
-package com.atooma.plugin.transmissionatoomamodule;
+package com.atooma.plugin.transmission;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -14,16 +14,17 @@ import org.json.JSONObject;
 
 import android.content.Context;
 import android.os.RemoteException;
+import android.util.Log;
 
 import com.atooma.plugin.AlarmBasedTrigger;
 import com.atooma.plugin.ParameterBundle;
 import com.atooma.plugin.Schedule;
 
-public class TR_DownloadRate extends AlarmBasedTrigger {
+public class TR_UploadRate extends AlarmBasedTrigger {
 
 	final private String sessionHeader = "X-Transmission-Session-Id";
 
-	public TR_DownloadRate(Context context, String id, int version) {
+	public TR_UploadRate(Context context, String id, int version) {
 		super(context, id, version);
 	}
 
@@ -38,7 +39,7 @@ public class TR_DownloadRate extends AlarmBasedTrigger {
 	@Override
 	public void defineUI() {
 		setIcon(R.drawable.plugin_icon_el_normal, R.drawable.plugin_icon_el_pressed);
-		setTitle(R.string.trigger_download);
+		setTitle(R.string.trigger_upload);
 	}
 
 	@Override
@@ -49,12 +50,13 @@ public class TR_DownloadRate extends AlarmBasedTrigger {
 
 	@Override
 	public void declareVariables() {
-		addVariable(R.string.download_var_name, "DOWNLOAD-RATE", "NUMBER");
+		addVariable(R.string.download_var_name, "UPLOAD-RATE", "NUMBER");
 	}
 
 	@Override
 	public void onTimeout(String ruleId, ParameterBundle parameters) {
-		Double donwloadFilter = (Double) parameters.get("DOWNLOAD-RATE");
+		Log.v("ATOOMA", "onTimeout");
+		Double donwloadFilter = (Double) parameters.get("UPLOAD-RATE");
 		String address = (String) parameters.get("ADDRESS");
 
 		String sessionId = TRANSMISSIONATOOMAMODULE.getSessionHeader(address);
@@ -70,7 +72,7 @@ public class TR_DownloadRate extends AlarmBasedTrigger {
 			data = new JSONObject();
 
 			JSONObject arguments = new JSONObject();
-			arguments.put("fields", new JSONArray().put("rateDownload").put("id"));
+			arguments.put("fields", new JSONArray().put("rateUpload").put("id"));
 			data.put("arguments", arguments);
 
 			data.put("method", "torrent-get");
@@ -100,7 +102,7 @@ public class TR_DownloadRate extends AlarmBasedTrigger {
 		rateDownload = rateDownload / 1024;
 		if (donwloadFilter == null || rateDownload > donwloadFilter) {
 			ParameterBundle variables = new ParameterBundle();
-			variables.put("DOWNLOAD-RATE", (double) rateDownload);
+			variables.put("UPLOAD-RATE", (double) rateDownload);
 			trigger(ruleId, variables);
 		}
 	}

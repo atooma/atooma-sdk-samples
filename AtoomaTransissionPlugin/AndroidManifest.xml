@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.atooma.plugin.transmissionatoomamodule"
+    package="com.atooma.plugin.transmission"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -11,7 +11,7 @@
 
     <application android:allowBackup="true" >
         <service
-            android:name="com.atooma.AtoomaService"
+            android:name="com.atooma.AtoomaPluginService"
             android:process=":remote" />
 
         <receiver android:name=".TRANSMISSIONATOOMAMODULEReceiver" >

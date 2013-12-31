@@ -1,4 +1,4 @@
-package com.atooma.plugin.transmissionatoomamodule;
+package com.atooma.plugin.transmission;
 
 import java.io.IOException;
 
