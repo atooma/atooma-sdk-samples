@@ -23,7 +23,7 @@ public class PE_Notification extends Performer {
 
 	@Override
 	public void declareParameters() {
-		addParameter(R.string.parameter_name, R.string.parameter_name_ifnull, "STRINGS", "PLUGIN", true);
+		addParameter(R.string.parameter_name, R.string.parameter_name_ifnull, "STRINGS", "STRING", true);
 	}
 
 	@Override
