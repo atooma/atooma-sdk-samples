@@ -263,4 +263,8 @@ public class FoursquareApp {
 
 		public abstract void onFail(String error);
 	}
+
+	public void clearAccessToken() {
+		mSession.clearAccessToken();
+	}
 }

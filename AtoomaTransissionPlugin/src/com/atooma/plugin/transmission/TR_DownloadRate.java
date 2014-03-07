@@ -14,6 +14,7 @@ import org.json.JSONObject;
 
 import android.content.Context;
 import android.os.RemoteException;
+import android.util.Log;
 
 import com.atooma.plugin.AlarmBasedTrigger;
 import com.atooma.plugin.ParameterBundle;
@@ -54,6 +55,7 @@ public class TR_DownloadRate extends AlarmBasedTrigger {
 
 	@Override
 	public void onTimeout(String ruleId, ParameterBundle parameters) {
+		Log.v("ATOOMA", "onTimeout");
 		Double donwloadFilter = (Double) parameters.get("DOWNLOAD-RATE");
 		String address = (String) parameters.get("ADDRESS");
 

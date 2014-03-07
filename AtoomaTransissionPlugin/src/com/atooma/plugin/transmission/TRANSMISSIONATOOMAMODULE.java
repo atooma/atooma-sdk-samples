@@ -62,4 +62,12 @@ public class TRANSMISSIONATOOMAMODULE extends Module {
 		return sessionToken;
 	}
 
+	@Override
+	public void clearCredentials() {
+	}
+
+	@Override
+	public void defineAuth() {
+	}
+
 }

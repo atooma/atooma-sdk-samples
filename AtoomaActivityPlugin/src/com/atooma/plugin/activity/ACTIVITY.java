@@ -1,6 +1,7 @@
 package com.atooma.plugin.activity;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.atooma.plugin.Module;
 
@@ -23,6 +24,22 @@ public class ACTIVITY extends Module {
 	public void defineUI() {
 		setIcon(R.drawable.plugin_icon_normal, R.drawable.plugin_icon_pressed);
 		setTitle(R.string.module_name);
+	}
+
+	@Override
+	public void defineAuth() {
+		SharedPreferences sp = getContext().getSharedPreferences("Prefs", 0);
+		String authText = sp.getString("AutenticatedText", "");
+		if (authText.length() > 0)
+			setAuthenticated(true, authText);
+		else
+			setAuthenticated(false, "");
+	}
+
+	@Override
+	public void clearCredentials() {
+		SharedPreferences sp = getContext().getSharedPreferences("Prefs", 0);
+		sp.edit().clear().commit();
 	}
 
 }

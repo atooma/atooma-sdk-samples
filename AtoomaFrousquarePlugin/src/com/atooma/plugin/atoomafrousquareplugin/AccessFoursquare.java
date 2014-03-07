@@ -1,7 +1,9 @@
 package com.atooma.plugin.atoomafrousquareplugin;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -23,6 +25,8 @@ public class AccessFoursquare extends Activity {
 		if (mFsqApp.hasAccessToken()) {
 			Intent result = new Intent();
 			result.putExtra(AtoomaParams.ACTIVITY_RESULT_KEY, mFsqApp.getUserName());
+			SharedPreferences sp = getSharedPreferences("Prefs", Context.MODE_MULTI_PROCESS);
+			sp.edit().putString("AutenticatedText", mFsqApp.getUserName()).commit();
 			setResult(RESULT_OK, result);
 			finish();
 		} else {
@@ -32,7 +36,10 @@ public class AccessFoursquare extends Activity {
 					Toast.makeText(AccessFoursquare.this, "Connected as " + mFsqApp.getUserName(), Toast.LENGTH_SHORT).show();
 					Intent result = new Intent();
 					result.putExtra(AtoomaParams.ACTIVITY_RESULT_KEY, mFsqApp.getUserName());
+					SharedPreferences sp = getSharedPreferences("Prefs", Context.MODE_MULTI_PROCESS);
+					sp.edit().putString("AutenticatedText", mFsqApp.getUserName()).commit();
 					setResult(RESULT_OK, result);
+					finish();
 				}
 
 				@Override

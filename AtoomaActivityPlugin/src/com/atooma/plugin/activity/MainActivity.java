@@ -2,6 +2,7 @@ package com.atooma.plugin.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -35,6 +36,8 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				String string = greetings[spinner.getSelectedItemPosition()];
 				Intent intent = new Intent();
+				SharedPreferences sp = getSharedPreferences("Prefs", 0);
+				sp.edit().putString("AutenticatedText", string).commit();
 				intent.putExtra(AtoomaParams.ACTIVITY_RESULT_KEY, string);
 				setResult(RESULT_OK, intent);
 				finish();

@@ -67,4 +67,8 @@ public class FoursquareSession {
 	public String getAccessToken() {
 		return sharedPref.getString(FSQ_ACCESS_TOKEN, null);
 	}
+
+	public void clearAccessToken() {
+		editor.clear().commit();
+	}
 }
