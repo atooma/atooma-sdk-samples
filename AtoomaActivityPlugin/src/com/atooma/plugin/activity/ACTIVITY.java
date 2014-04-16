@@ -28,7 +28,7 @@ public class ACTIVITY extends Module {
 
 	@Override
 	public void defineAuth() {
-		SharedPreferences sp = getContext().getSharedPreferences("Prefs", 0);
+		SharedPreferences sp = getContext().getSharedPreferences("Prefs", Context.MODE_MULTI_PROCESS);
 		String authText = sp.getString("AutenticatedText", "");
 		if (authText.length() > 0)
 			setAuthenticated(true, authText);
@@ -38,7 +38,7 @@ public class ACTIVITY extends Module {
 
 	@Override
 	public void clearCredentials() {
-		SharedPreferences sp = getContext().getSharedPreferences("Prefs", 0);
+		SharedPreferences sp = getContext().getSharedPreferences("Prefs", Context.MODE_MULTI_PROCESS);
 		sp.edit().clear().commit();
 	}
 
