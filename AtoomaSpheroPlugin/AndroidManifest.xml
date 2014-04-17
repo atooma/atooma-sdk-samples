@@ -1,4 +1,3 @@
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.atooma.plugin.sphero"
     android:versionCode="1"
@@ -7,23 +6,24 @@
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="17" />
-    
+
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
-    <application
-        android:allowBackup="true">
+    <application android:allowBackup="true" >
         <service
-            android:name="com.atooma.AtoomaService"
+            android:name="com.atooma.AtoomaPluginService"
             android:process=":remote" />
 
-        <receiver android:name=".SPHERORegister" >
+        <receiver android:name=".SPHEROReceiver" >
             <intent-filter>
                 <action android:name="com.atooma.plugin.REGISTRATION" />
             </intent-filter>
         </receiver>
 
-        <service android:name="com.atooma.sdk.RegisterService" />
+        <service
+            android:name=".SPHERORegister"
+            android:process=":remote" />
     </application>
 
 </manifest>

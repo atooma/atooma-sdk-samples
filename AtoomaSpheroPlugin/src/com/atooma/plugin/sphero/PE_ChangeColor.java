@@ -2,13 +2,16 @@ package com.atooma.plugin.sphero;
 
 import java.util.List;
 
-import orbotix.robot.base.*;
-
-import orbotix.robot.sensor.DeviceSensorsData;
-import orbotix.sphero.*;
+import orbotix.robot.base.CollisionDetectedAsyncData;
 import orbotix.robot.base.Robot;
 import orbotix.robot.base.RobotProvider;
+import orbotix.robot.sensor.DeviceSensorsData;
+import orbotix.sphero.CollisionListener;
+import orbotix.sphero.ConnectionListener;
 import orbotix.sphero.DiscoveryListener;
+import orbotix.sphero.SensorControl;
+import orbotix.sphero.SensorFlag;
+import orbotix.sphero.SensorListener;
 import orbotix.sphero.Sphero;
 import android.content.Context;
 import android.util.Log;
@@ -27,7 +30,7 @@ public class PE_ChangeColor extends Performer {
 
 	@Override
 	public void defineUI() {
-		setIcon(R.drawable.plugin_icon_el_normal, R.drawable.plugin_icon_pressed);
+		setIcon(R.drawable.plugin_icon_el_normal, R.drawable.plugin_icon_el_pressed);
 		setTitle(R.string.pe_change_color_title);
 	}
 
@@ -37,28 +40,28 @@ public class PE_ChangeColor extends Performer {
 		//addParameter(R.string.g_label, R.string.module_name, "G", "STRING", true);
 		//addParameter(R.string.b_label, R.string.module_name, "B", "STRING", true);
 	}
-	
+
 	private void setLights(int r, int g, int b) {
 		final SensorControl control = mRobot.getSensorControl();
-        control.addSensorListener(new SensorListener() {
-            @Override
-            public void sensorUpdated(DeviceSensorsData sensorDataArray) {
-                Log.d(TAG, sensorDataArray.toString());
-            }
-        } ,SensorFlag.ACCELEROMETER_NORMALIZED, SensorFlag.GYRO_NORMALIZED);
+		control.addSensorListener(new SensorListener() {
+			@Override
+			public void sensorUpdated(DeviceSensorsData sensorDataArray) {
+				Log.d(TAG, sensorDataArray.toString());
+			}
+		}, SensorFlag.ACCELEROMETER_NORMALIZED, SensorFlag.GYRO_NORMALIZED);
 
-        control.setRate(1);
-        mRobot.enableStabilization(false);
-        mRobot.drive(90, 0);
-        mRobot.setBackLEDBrightness(.5f);
+		control.setRate(1);
+		mRobot.enableStabilization(false);
+		mRobot.drive(90, 0);
+		mRobot.setBackLEDBrightness(.5f);
 
-        mRobot.getCollisionControl().startDetection(255,255,255,255,255);
-        mRobot.getCollisionControl().addCollisionListener(new CollisionListener() {
-            public void collisionDetected(CollisionDetectedAsyncData collisionData) {
-                Log.d(TAG, collisionData.toString());
-            }
-        });
-        mRobot.setColor(r, g, b);
+		mRobot.getCollisionControl().startDetection(255, 255, 255, 255, 255);
+		mRobot.getCollisionControl().addCollisionListener(new CollisionListener() {
+			public void collisionDetected(CollisionDetectedAsyncData collisionData) {
+				Log.d(TAG, collisionData.toString());
+			}
+		});
+		mRobot.setColor(r, g, b);
 	}
 
 	@Override
