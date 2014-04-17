@@ -23,7 +23,7 @@ public class TR_FriendsCheckin extends AlarmBasedTrigger {
 
 	@Override
 	public Schedule getScheduleInfo() throws RemoteException {
-		return new Schedule(true, true, false, System.currentTimeMillis(), (long) (10 * 1000));
+		return new Schedule(true, true, false, System.currentTimeMillis(), (long) (10 * 60 * 1000));
 	}
 
 	@Override
