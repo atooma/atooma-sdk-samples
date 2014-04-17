@@ -38,7 +38,7 @@ public class TR_UploadRate extends AlarmBasedTrigger {
 
 	@Override
 	public void defineUI() {
-		setIcon(R.drawable.plugin_icon_el_normal, R.drawable.plugin_icon_el_pressed);
+		setIcon(R.drawable.upload_rate, R.drawable.upload_rate_pressed);
 		setTitle(R.string.trigger_upload);
 	}
 

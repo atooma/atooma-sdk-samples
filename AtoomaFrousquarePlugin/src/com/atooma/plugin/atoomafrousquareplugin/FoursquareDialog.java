@@ -83,7 +83,7 @@ public class FoursquareDialog extends Dialog {
 	private void setUpTitle() {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-		Drawable icon = getContext().getResources().getDrawable(R.drawable.plugin_icon_el_normal);
+		Drawable icon = getContext().getResources().getDrawable(R.drawable.plugin_icon_normal);
 
 		mTitle = new TextView(getContext());
 

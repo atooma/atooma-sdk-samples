@@ -28,7 +28,7 @@ public class PE_DownloadRate extends Performer {
 
 	@Override
 	public void defineUI() {
-		setIcon(R.drawable.plugin_icon_el_normal, R.drawable.plugin_icon_el_pressed);
+		setIcon(R.drawable.download_rate, R.drawable.download_rate_pressed);
 		setTitle(R.string.trigger_download);
 	}
 
