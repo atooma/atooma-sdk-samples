@@ -38,7 +38,7 @@ public class TR_DownloadRate extends AlarmBasedTrigger {
 
 	@Override
 	public void defineUI() {
-		setIcon(R.drawable.download_rate, R.drawable.download_rate_pressed);
+		setIcon(R.drawable.download_rate);
 		setTitle(R.string.trigger_download);
 	}
 

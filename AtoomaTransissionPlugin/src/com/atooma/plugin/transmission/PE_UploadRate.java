@@ -27,7 +27,7 @@ public class PE_UploadRate extends Performer {
 
 	@Override
 	public void defineUI() {
-		setIcon(R.drawable.upload_rate, R.drawable.upload_rate_pressed);
+		setIcon(R.drawable.upload_rate);
 		setTitle(R.string.trigger_upload);
 	}
 

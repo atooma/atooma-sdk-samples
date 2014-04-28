@@ -29,7 +29,7 @@ public class TR_FriendsCheckin extends AlarmBasedTrigger {
 	@Override
 	public void defineUI() {
 		setTitle(R.string.tr_friends_checking);
-		setIcon(R.drawable.friends_checkin, R.drawable.friends_checkin_pressed);
+		setIcon(R.drawable.friends_checkin);
 	}
 
 	@Override

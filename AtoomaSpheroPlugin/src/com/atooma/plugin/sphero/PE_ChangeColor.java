@@ -30,7 +30,7 @@ public class PE_ChangeColor extends Performer {
 
 	@Override
 	public void defineUI() {
-		setIcon(R.drawable.plugin_icon_el_normal, R.drawable.plugin_icon_el_pressed);
+		setIcon(R.drawable.plugin_icon_el_normal);
 		setTitle(R.string.pe_change_color_title);
 	}
 
