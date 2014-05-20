@@ -1,17 +1,18 @@
-package com.atooma.plugin.atoomafrousquareplugin;
+package com.atooma.plugin.atoomafoursquareplugin;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.atooma.plugin.Module;
+import com.atooma.plugin.atoomafrousquareplugin.R;
 
-public class ATOOMAFROUSQUAREPLUGIN extends Module {
+public class ATOOMAFOURSQUAREPLUGIN extends Module {
 
 	public static final String MODULE_ID = "FOURSQUARE";
 	public static final int MODULE_VERSION = 1;
 	public FoursquareApp mFsqApp;
 
-	public ATOOMAFROUSQUAREPLUGIN(Context context, String id, int version) {
+	public ATOOMAFOURSQUAREPLUGIN(Context context, String id, int version) {
 		super(context, id, version);
 	}
 

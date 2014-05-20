@@ -1,4 +1,4 @@
-package com.atooma.plugin.atoomafrousquareplugin;
+package com.atooma.plugin.atoomafoursquareplugin;
 
 import java.util.HashMap;
 
@@ -12,6 +12,7 @@ import android.os.RemoteException;
 import com.atooma.plugin.AlarmBasedTrigger;
 import com.atooma.plugin.ParameterBundle;
 import com.atooma.plugin.Schedule;
+import com.atooma.plugin.atoomafrousquareplugin.R;
 
 public class TR_FriendsCheckin extends AlarmBasedTrigger {
 

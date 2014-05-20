@@ -1,4 +1,6 @@
-package com.atooma.plugin.atoomafrousquareplugin;
+package com.atooma.plugin.atoomafoursquareplugin;
+
+import com.atooma.plugin.atoomafrousquareplugin.R;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;

@@ -1,4 +1,4 @@
-package com.atooma.plugin.atoomafrousquareplugin;
+package com.atooma.plugin.atoomafoursquareplugin;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.atooma.plugin.AtoomaParams;
-import com.atooma.plugin.atoomafrousquareplugin.FoursquareApp.FsqAuthListener;
+import com.atooma.plugin.atoomafoursquareplugin.FoursquareApp.FsqAuthListener;
 
 public class AccessFoursquare extends Activity {
 

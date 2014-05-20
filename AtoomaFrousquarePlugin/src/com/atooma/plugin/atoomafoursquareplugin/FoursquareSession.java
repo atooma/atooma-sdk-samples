@@ -1,4 +1,4 @@
-package com.atooma.plugin.atoomafrousquareplugin;
+package com.atooma.plugin.atoomafoursquareplugin;
 
 import android.content.Context;
 import android.content.SharedPreferences;

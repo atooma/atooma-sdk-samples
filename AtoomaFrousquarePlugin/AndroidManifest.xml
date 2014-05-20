@@ -16,18 +16,18 @@
             android:name="com.atooma.AtoomaService"
             android:process=":remote" />
 
-        <receiver android:name=".ATOOMAFROUSQUAREPLUGINReceiver" >
+        <receiver android:name="com.atooma.plugin.atoomafoursquareplugin.ATOOMAFOURSQUAREPLUGINReceiver" >
             <intent-filter>
                 <action android:name="com.atooma.plugin.REGISTRATION" />
             </intent-filter>
         </receiver>
 
         <service
-            android:name=".ATOOMAFROUSQUAREPLUGINRegister"
+            android:name="com.atooma.plugin.atoomafoursquareplugin.ATOOMAFOURSQUAREPLUGINRegister"
             android:process=":remote" />
 
         <activity
-            android:name=".AccessFoursquare"
+            android:name="com.atooma.plugin.atoomafoursquareplugin.AccessFoursquare"
             android:exported="true" >
         </activity>
     </application>

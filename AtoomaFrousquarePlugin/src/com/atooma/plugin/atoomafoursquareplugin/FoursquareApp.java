@@ -1,4 +1,4 @@
-package com.atooma.plugin.atoomafrousquareplugin;
+package com.atooma.plugin.atoomafoursquareplugin;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,7 +19,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import com.atooma.plugin.atoomafrousquareplugin.FoursquareDialog.FsqDialogListener;
+import com.atooma.plugin.atoomafoursquareplugin.FoursquareDialog.FsqDialogListener;
 
 /**
  * 
