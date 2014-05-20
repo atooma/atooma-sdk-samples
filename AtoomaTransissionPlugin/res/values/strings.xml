@@ -1,7 +1,7 @@
 <resources>
 
-    <string name="app_name">Transission Module</string>
-    <string name="module_name">Transission</string>
+    <string name="app_name">Transmission Module</string>
+    <string name="module_name">Transmission</string>
     <string name="download_par_address_name">Address in format address:port (without "http://")</string>
     <string name="download_par_name">Minimum download rate in order to trigger (in KB)</string>
     <string name="performer_download_par_name">Download rate to set (in KB)</string>
