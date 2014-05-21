@@ -16,6 +16,7 @@ public class SPHERO extends Module {
 	@Override
 	public void registerComponents() {
 		registerPerformer(new PE_ChangeColor(getContext(), "PE_CHANGE_COLOR", 1));
+		registerPerformer(new PE_GetCrazy(getContext(), "PE_GET_CRAZY", 1));
 	}
 
 	@Override

@@ -3,7 +3,9 @@
     <string name="app_name">SpheroPlugin</string>
     <string name="module_name">Sphero</string>
     <string name="pe_change_color_title">Change color</string>
+    <string name="pe_get_crazy_title">Get crazy</string>
     <string name="r_label">R value</string>
     <string name="g_label">G value</string>
     <string name="b_label">B value</string>
+    <string name="sphero_name_label">Which Sphero do you want to use?</string>
 </resources>
