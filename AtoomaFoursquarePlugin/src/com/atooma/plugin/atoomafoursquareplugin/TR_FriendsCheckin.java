@@ -35,7 +35,7 @@ public class TR_FriendsCheckin extends AlarmBasedTrigger {
 
 	@Override
 	public void declareParameters() {
-		addParameter(R.string.authentication_parameter, R.string.authentication_parameter, "ACCESS", "PLUGIN", true, "com.atooma.plugin.atoomafrousquareplugin.AccessFoursquare");
+		addParameter(R.string.authentication_parameter, R.string.authentication_parameter, "ACCESS", "PLUGIN", true, "com.atooma.plugin.atoomafoursquareplugin.AccessFoursquare");
 	}
 
 	@Override
