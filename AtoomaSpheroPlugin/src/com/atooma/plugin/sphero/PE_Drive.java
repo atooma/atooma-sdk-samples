@@ -14,7 +14,7 @@ public class PE_Drive extends Performer {
 	
 	@Override
 	public void defineUI() {
-		setIcon(R.drawable.plugin_icon_el_normal);
+		setIcon(R.drawable.drive_sphero);
 		setTitle(R.string.pe_drive_title);
 	}
 

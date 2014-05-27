@@ -16,7 +16,7 @@ public class PE_GetCrazy extends Performer {
 
 	@Override
 	public void defineUI() {
-		setIcon(R.drawable.plugin_icon_el_normal);
+		setIcon(R.drawable.get_crazy_sphero);
 		setTitle(R.string.pe_get_crazy_title);
 	}
 
