@@ -22,7 +22,6 @@ public class PE_GetCrazy extends Performer {
 
 	@Override
 	public void declareParameters() {
-		addParameter(R.string.r_label, R.string.module_name, "SPHERO_NAME", "STRING", false);
 	}
 
 	@Override

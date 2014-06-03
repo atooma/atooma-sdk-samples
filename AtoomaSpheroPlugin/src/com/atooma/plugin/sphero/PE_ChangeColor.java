@@ -20,7 +20,6 @@ public class PE_ChangeColor extends Performer {
 
 	@Override
 	public void declareParameters() {
-		addParameter(R.string.r_label, R.string.module_name, "SPHERO_NAME", "STRING", false);
 		addParameter(R.string.r_label, R.string.module_name, "R", "NUMBER", true);
 		addParameter(R.string.g_label, R.string.module_name, "G", "NUMBER", true);
 		addParameter(R.string.b_label, R.string.module_name, "B", "NUMBER", true);
