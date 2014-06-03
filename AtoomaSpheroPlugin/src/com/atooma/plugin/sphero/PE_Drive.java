@@ -28,7 +28,8 @@ public class PE_Drive extends Performer {
 
 	@Override
 	public ParameterBundle onInvoke(String ruleId, ParameterBundle parameters) {
-		SpheroBot sphero = new SpheroBot(this.getContext()); 
+		SpheroBot sphero = SpheroSingleBot.getInstance(this.getContext()); 
+		while (sphero.isRunning()) {}
 		float degree = doubleToFloat((Double)parameters.get("DEGREE"));
 		float speed = doubleToInt((Double)parameters.get("SPEED"));
 		int duration = doubleToInt((Double)parameters.get("DURATION"));
