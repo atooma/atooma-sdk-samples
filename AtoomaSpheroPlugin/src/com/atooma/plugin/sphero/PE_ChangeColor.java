@@ -23,6 +23,7 @@ public class PE_ChangeColor extends Performer {
 		addParameter(R.string.r_label, R.string.module_name, "R", "NUMBER", true);
 		addParameter(R.string.g_label, R.string.module_name, "G", "NUMBER", true);
 		addParameter(R.string.b_label, R.string.module_name, "B", "NUMBER", true);
+		addParameter(R.string.duration_label, R.string.module_name, "DURATION", "NUMBER", true);
 	}
 
 	@Override
@@ -32,7 +33,7 @@ public class PE_ChangeColor extends Performer {
 		int r = doubleToInt((Double)parameters.get("R"));
 		int g = doubleToInt((Double)parameters.get("G"));
 		int b = doubleToInt((Double)parameters.get("B"));
-		sphero.setColor(r, g, b, 1000);
+		sphero.setColor(r, g, b, doubleToInt((Double)parameters.get("DURATION")));
 		sphero.start();
 		return parameters;
 	}

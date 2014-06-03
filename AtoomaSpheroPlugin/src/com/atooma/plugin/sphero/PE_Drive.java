@@ -20,9 +20,9 @@ public class PE_Drive extends Performer {
 
 	@Override
 	public void declareParameters() {
-		addParameter(R.string.r_label, R.string.module_name, "DEGREE", "NUMBER", false);
-		addParameter(R.string.r_label, R.string.module_name, "SPEED", "NUMBER", false);
-		addParameter(R.string.r_label, R.string.module_name, "DURATION", "NUMBER", false);
+		addParameter(R.string.degree_label, R.string.module_name, "DEGREE", "NUMBER", true);
+		addParameter(R.string.speed_label, R.string.module_name, "SPEED", "NUMBER", true);
+		addParameter(R.string.duration_label, R.string.module_name, "DURATION", "NUMBER", true);
 
 	}
 
