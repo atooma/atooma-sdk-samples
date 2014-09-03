@@ -29,7 +29,7 @@ public class PE_ChangeColor extends Performer {
 	@Override
 	public ParameterBundle onInvoke(String ruleId, ParameterBundle parameters) {
 		SpheroBot sphero = SpheroSingleBot.getInstance(this.getContext()); 
-		while (sphero.isRunning()) {}
+		if (sphero.isRunning()) {return null;}
 		int r = doubleToInt((Double)parameters.get("R"));
 		int g = doubleToInt((Double)parameters.get("G"));
 		int b = doubleToInt((Double)parameters.get("B"));
