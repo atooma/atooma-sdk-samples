@@ -27,7 +27,6 @@ public class PE_GetCrazy extends Performer {
 	@Override
 	public ParameterBundle onInvoke(String ruleId, ParameterBundle parameters) {
 		SpheroBot sphero = SpheroSingleBot.getInstance(this.getContext());
-		if (sphero.isRunning()) {return null;}
 		int iterations = random(2, 20);
 		for (int i = 0 ; i < iterations ; i++) {
 			int action = random(1, 1000) % 2;
