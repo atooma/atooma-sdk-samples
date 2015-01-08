@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/opt/monossido/AndroidstudioProjects/AtoomaSDKSamples/TransmissionPlugin/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">Transmission Module</string>
+    <string name="download_par_address_name">Address in format address:port (without "http://")</string>
+    <string name="download_par_name">Minimum download rate in order to trigger (in KB)</string>
+    <string name="download_par_name_null">No filter</string>
+    <string name="download_var_name">Current download rate</string>
+    <string name="module_name">Transmission</string>
+    <string name="performer_download_par_name">Download rate to set (in KB)</string>
+    <string name="performer_upload_par_name">Upload rate to set (in KB)</string>
+    <string name="trigger_download">Download rate</string>
+    <string name="trigger_upload">Upload rate</string>
+    <string name="upload_par_name">Minimum upload rate in order to trigger (in KB)</string>
+    <string name="upload_var_name">Current upload rate</string>
+    <!-- From: file:/opt/monossido/AndroidstudioProjects/AtoomaSDKSamples/TransmissionPlugin/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

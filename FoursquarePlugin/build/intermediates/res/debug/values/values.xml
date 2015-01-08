@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/opt/monossido/AndroidstudioProjects/AtoomaSDKSamples/FoursquarePlugin/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">AtoomafrousquarepluginPlugin</string>
+    <string name="authentication_parameter">Authentication</string>
+    <string name="module_name">Foursquare</string>
+    <string name="tr_friends_checking">Friends checkins</string>
+</resources>

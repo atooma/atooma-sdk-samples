@@ -1,0 +1,59 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:1:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:1:11
+	package
+		ADDED from AndroidManifest.xml:2:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionName
+		ADDED from AndroidManifest.xml:4:5
+	android:versionCode
+		ADDED from AndroidManifest.xml:3:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+uses-sdk
+ADDED from AndroidManifest.xml:6:5
+	android:targetSdkVersion
+		ADDED from AndroidManifest.xml:8:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:minSdkVersion
+		ADDED from AndroidManifest.xml:7:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+uses-permission#android.permission.BLUETOOTH
+ADDED from AndroidManifest.xml:10:5
+	android:name
+		ADDED from AndroidManifest.xml:10:22
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from AndroidManifest.xml:11:5
+	android:name
+		ADDED from AndroidManifest.xml:11:22
+application
+ADDED from AndroidManifest.xml:13:5
+	android:allowBackup
+		ADDED from AndroidManifest.xml:13:18
+service#com.atooma.AtoomaPluginService
+ADDED from AndroidManifest.xml:14:9
+	android:process
+		ADDED from AndroidManifest.xml:16:13
+	android:name
+		ADDED from AndroidManifest.xml:15:13
+receiver#com.atooma.plugin.sphero.SPHEROReceiver
+ADDED from AndroidManifest.xml:18:9
+	android:name
+		ADDED from AndroidManifest.xml:18:19
+intent-filter#com.atooma.plugin.REGISTRATION
+ADDED from AndroidManifest.xml:19:13
+action#com.atooma.plugin.REGISTRATION
+ADDED from AndroidManifest.xml:20:17
+	android:name
+		ADDED from AndroidManifest.xml:20:25
+service#com.atooma.plugin.sphero.SPHERORegister
+ADDED from AndroidManifest.xml:24:9
+	android:process
+		ADDED from AndroidManifest.xml:26:13
+	android:name
+		ADDED from AndroidManifest.xml:25:13

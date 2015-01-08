@@ -1,0 +1,8 @@
+
+<resources>
+    <string name="app_name">PebblePlugin</string>
+    <string name="module_name">Pebble</string>
+    <string name="pe_send_notification_title">Send notification</string>
+    <string name="title_label">Title</string>
+    <string name="body_label">Body</string>
+</resources>

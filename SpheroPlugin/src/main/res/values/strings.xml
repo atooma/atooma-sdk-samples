@@ -1,0 +1,15 @@
+
+<resources>
+    <string name="app_name">SpheroPlugin</string>
+    <string name="module_name">Sphero</string>
+    <string name="pe_change_color_title">Change color</string>
+    <string name="pe_get_crazy_title">Get crazy</string>
+    <string name="pe_drive_title">Drive</string>
+    <string name="r_label">RED value</string>
+    <string name="g_label">GREEN value</string>
+    <string name="b_label">BLUE value</string>
+    <string name="duration_label">Duration</string>
+    <string name="speed_label">Speed</string>
+    <string name="degree_label">Degree</string>
+    <string name="sphero_name_label">Which Sphero do you want to use?</string>
+</resources>

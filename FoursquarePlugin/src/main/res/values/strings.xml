@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">AtoomafrousquarepluginPlugin</string>
+    <string name="module_name">Foursquare</string>
+    <string name="tr_friends_checking">Friends checkins</string>
+    <string name="authentication_parameter">Authentication</string>
+
+</resources>

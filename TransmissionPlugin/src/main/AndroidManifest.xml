@@ -1,0 +1,30 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atooma.plugin.transmission"
+    android:versionCode="2"
+    android:versionName="1.1">
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/plugin_icon_normal">
+        <service
+            android:name="com.atooma.AtoomaPluginService"
+            android:process=":remote" />
+
+        <receiver android:name=".TRANSMISSIONATOOMAMODULEReceiver">
+            <intent-filter>
+                <action android:name="com.atooma.plugin.REGISTRATION" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".TRANSMISSIONATOOMAMODULERegister"
+            android:process=":remote" />
+    </application>
+
+</manifest>
