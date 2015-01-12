@@ -4,9 +4,9 @@ import android.content.Context;
 import android.os.RemoteException;
 
 import com.atooma.plugin.atoomafrousquareplugin.R;
-import com.atooma.sdk.plugin.AlarmBasedTrigger;
-import com.atooma.sdk.plugin.ParameterBundle;
-import com.atooma.sdk.plugin.Schedule;
+import com.atooma.plugin.AlarmBasedTrigger;
+import com.atooma.plugin.ParameterBundle;
+import com.atooma.plugin.Schedule;
 
 import org.json.JSONArray;
 import org.json.JSONException;

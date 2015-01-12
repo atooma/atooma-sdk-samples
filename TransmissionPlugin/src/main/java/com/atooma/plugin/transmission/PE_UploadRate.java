@@ -14,8 +14,8 @@ import android.content.Context;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.atooma.sdk.plugin.ParameterBundle;
-import com.atooma.sdk.plugin.Performer;
+import com.atooma.plugin.ParameterBundle;
+import com.atooma.plugin.Performer;
 
 public class PE_UploadRate extends Performer {
 

@@ -3,8 +3,8 @@ package com.atooma.plugin.pebble;
 import android.content.Context;
 import android.content.Intent;
 
-import com.atooma.sdk.plugin.ParameterBundle;
-import com.atooma.sdk.plugin.Performer;
+import com.atooma.plugin.ParameterBundle;
+import com.atooma.plugin.Performer;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

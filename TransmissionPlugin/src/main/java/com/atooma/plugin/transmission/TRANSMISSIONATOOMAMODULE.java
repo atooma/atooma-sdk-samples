@@ -9,7 +9,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import android.content.Context;
 
-import com.atooma.sdk.plugin.Module;
+import com.atooma.plugin.Module;
 
 public class TRANSMISSIONATOOMAMODULE extends Module {
 

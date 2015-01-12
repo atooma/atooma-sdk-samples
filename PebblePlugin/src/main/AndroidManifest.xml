@@ -8,9 +8,6 @@
         android:targetSdkVersion="21" />
 
     <application android:allowBackup="true">
-        <service
-            android:name="com.atooma.sdk.AtoomaService"
-            android:process=":remote" />
 
         <receiver android:name=".PEBBLEReceiver">
             <intent-filter>

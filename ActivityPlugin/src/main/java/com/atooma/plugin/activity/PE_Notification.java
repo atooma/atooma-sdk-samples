@@ -6,8 +6,8 @@ import android.os.Looper;
 import android.os.RemoteException;
 import android.widget.Toast;
 
-import com.atooma.sdk.plugin.ParameterBundle;
-import com.atooma.sdk.plugin.Performer;
+import com.atooma.plugin.ParameterBundle;
+import com.atooma.plugin.Performer;
 
 public class PE_Notification extends Performer {
 

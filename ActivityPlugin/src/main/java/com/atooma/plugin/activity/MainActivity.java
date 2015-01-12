@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-import com.atooma.sdk.plugin.AtoomaParams;
+import com.atooma.plugin.AtoomaParams;
 
 public class MainActivity extends Activity {
 

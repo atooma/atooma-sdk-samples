@@ -1,7 +1,7 @@
 package com.atooma.plugin.transmission;
 
 import com.atooma.sdk.RegisterService;
-import com.atooma.sdk.plugin.Module;
+import com.atooma.plugin.Module;
 
 public class TRANSMISSIONATOOMAMODULERegister extends RegisterService {
 	@Override

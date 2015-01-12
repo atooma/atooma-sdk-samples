@@ -3,7 +3,7 @@ package com.atooma.plugin.activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.atooma.sdk.plugin.Module;
+import com.atooma.plugin.Module;
 
 
 public class ACTIVITY extends Module {

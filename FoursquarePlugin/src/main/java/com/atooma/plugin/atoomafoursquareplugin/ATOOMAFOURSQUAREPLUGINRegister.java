@@ -2,7 +2,7 @@
 package com.atooma.plugin.atoomafoursquareplugin;
 
 import com.atooma.sdk.RegisterService;
-import com.atooma.sdk.plugin.Module;
+import com.atooma.plugin.Module;
 
 public class ATOOMAFOURSQUAREPLUGINRegister extends RegisterService {
     @Override

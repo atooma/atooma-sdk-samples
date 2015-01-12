@@ -3,9 +3,9 @@ package com.atooma.plugin.activity;
 import android.content.Context;
 import android.os.RemoteException;
 
-import com.atooma.sdk.plugin.AlarmBasedTrigger;
-import com.atooma.sdk.plugin.ParameterBundle;
-import com.atooma.sdk.plugin.Schedule;
+import com.atooma.plugin.AlarmBasedTrigger;
+import com.atooma.plugin.ParameterBundle;
+import com.atooma.plugin.Schedule;
 
 public class TR_GetString extends AlarmBasedTrigger {
 

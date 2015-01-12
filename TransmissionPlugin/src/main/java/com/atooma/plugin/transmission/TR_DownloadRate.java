@@ -16,9 +16,9 @@ import android.content.Context;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.atooma.sdk.plugin.AlarmBasedTrigger;
-import com.atooma.sdk.plugin.ParameterBundle;
-import com.atooma.sdk.plugin.Schedule;
+import com.atooma.plugin.AlarmBasedTrigger;
+import com.atooma.plugin.ParameterBundle;
+import com.atooma.plugin.Schedule;
 
 public class TR_DownloadRate extends AlarmBasedTrigger {
 

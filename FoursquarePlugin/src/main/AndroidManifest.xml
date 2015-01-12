@@ -12,9 +12,6 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/plugin_icon_normal">
-        <service
-            android:name="com.atooma.sdk.AtoomaService"
-            android:process=":remote" />
 
         <receiver android:name="com.atooma.plugin.atoomafoursquareplugin.ATOOMAFOURSQUAREPLUGINReceiver">
             <intent-filter>

@@ -2,7 +2,7 @@ package com.atooma.plugin.pebble;
 
 import android.content.Context;
 
-import com.atooma.sdk.plugin.Module;
+import com.atooma.plugin.Module;
 
 public class PEBBLE extends Module {
 

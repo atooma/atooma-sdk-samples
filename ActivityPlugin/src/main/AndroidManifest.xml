@@ -12,10 +12,6 @@
             android:name="com.atooma.plugin.activity.MainActivity"
             android:exported="true" />
 
-        <service
-            android:name="com.atooma.sdk.AtoomaService"
-            android:process=":remote" />
-
         <receiver android:name=".ACTIVITYReceiver">
             <intent-filter>
                 <action android:name="com.atooma.plugin.REGISTRATION" />

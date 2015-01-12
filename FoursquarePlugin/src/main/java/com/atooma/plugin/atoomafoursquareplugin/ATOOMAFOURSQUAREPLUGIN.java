@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.atooma.plugin.atoomafrousquareplugin.R;
-import com.atooma.sdk.plugin.Module;
+import com.atooma.plugin.Module;
 
 public class ATOOMAFOURSQUAREPLUGIN extends Module {
 

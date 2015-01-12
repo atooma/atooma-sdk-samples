@@ -2,8 +2,8 @@ package com.atooma.plugin.sphero;
 
 import android.content.Context;
 
-import com.atooma.sdk.plugin.ParameterBundle;
-import com.atooma.sdk.plugin.Performer;
+import com.atooma.plugin.ParameterBundle;
+import com.atooma.plugin.Performer;
 
 public class PE_ChangeColor extends Performer {
 
