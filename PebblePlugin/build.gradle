@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.atooma.plugin.pebble"
-        minSdkVersion 8
+        minSdkVersion 9
         targetSdkVersion 21
     }
 
@@ -17,7 +16,7 @@ android {
         }
     }
 }
-
 dependencies {
-    compile project(':AtoomaSdk')
+    compile 'com.atooma:atooma-android-sdk:1.2.1@aar'
 }
+

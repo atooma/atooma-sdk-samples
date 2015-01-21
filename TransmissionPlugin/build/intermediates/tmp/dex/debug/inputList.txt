@@ -1,2 +1,0 @@
-/opt/monossido/AndroidstudioProjects/AtoomaSDKSamples/TransmissionPlugin/build/intermediates/classes/debug
-/opt/monossido/AndroidstudioProjects/AtoomaSDKSamples/TransmissionPlugin/build/intermediates/pre-dexed/debug/classes-7518df2dcfd57e9efe8f8064d0881cd6ca31ac05.jar

@@ -1,1 +1,1 @@
-include 'ActivityPlugin', 'FoursquarePlugin', 'PebblePlugin', 'SpheroPlugin', 'TransmissionPlugin', 'AtoomaSdk'
+include 'ActivityPlugin', 'FoursquarePlugin', 'PebblePlugin', 'SpheroPlugin', 'TransmissionPlugin'

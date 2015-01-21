@@ -1,2 +1,0 @@
-/opt/monossido/AndroidstudioProjects/AtoomaSDKSamples/FoursquarePlugin/build/intermediates/classes/debug
-/opt/monossido/AndroidstudioProjects/AtoomaSDKSamples/FoursquarePlugin/build/intermediates/pre-dexed/debug/classes-6a3068fdd311c9e44042831f80d6e0149130e726.jar

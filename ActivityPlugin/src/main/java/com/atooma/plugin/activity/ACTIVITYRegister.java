@@ -1,7 +1,7 @@
 package com.atooma.plugin.activity;
 
+import com.atooma.plugin.IModulePlugin;
 import com.atooma.sdk.RegisterService;
-import com.atooma.sdk.plugin.IModulePlugin;
 
 public class ACTIVITYRegister extends RegisterService {
 
