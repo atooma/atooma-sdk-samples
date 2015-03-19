@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.atooma.plugin.atoomafrousquareplugin"
+    package="com.atooma.plugin.atoomafoursquareplugin"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -21,11 +21,11 @@
 
         <service
             android:name="com.atooma.plugin.atoomafoursquareplugin.ATOOMAFOURSQUAREPLUGINRegister"
-            android:process=":remote" />
+            android:exported="true" />
 
         <activity
             android:name="com.atooma.plugin.atoomafoursquareplugin.AccessFoursquare"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

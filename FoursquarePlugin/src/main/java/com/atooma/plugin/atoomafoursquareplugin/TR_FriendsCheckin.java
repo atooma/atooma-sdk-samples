@@ -2,11 +2,12 @@ package com.atooma.plugin.atoomafoursquareplugin;
 
 import android.content.Context;
 import android.os.RemoteException;
+import android.util.Log;
 
-import com.atooma.plugin.atoomafrousquareplugin.R;
 import com.atooma.plugin.AlarmBasedTrigger;
 import com.atooma.plugin.ParameterBundle;
 import com.atooma.plugin.Schedule;
+import com.atooma.sdk.IAtoomaService;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,7 +17,7 @@ import java.util.HashMap;
 
 public class TR_FriendsCheckin extends AlarmBasedTrigger {
 
-    private HashMap<String, String> sinceIds = new HashMap<String, String>();
+    private final HashMap<String, String> sinceIds = new HashMap<String, String>();
 
     public TR_FriendsCheckin(Context context, String id, int version) {
         super(context, id, version);
@@ -39,7 +40,8 @@ public class TR_FriendsCheckin extends AlarmBasedTrigger {
     }
 
     @Override
-    public void onTimeout(String ruleId, ParameterBundle arg1) {
+    public void onTimeout(IAtoomaService atoomaService, String ruleId, ParameterBundle parameters) {
+        Log.v("ATOOMA", "onTimeout");
         String sinceId;
         synchronized (sinceIds) {
             sinceId = sinceIds.get(ruleId);
@@ -53,13 +55,14 @@ public class TR_FriendsCheckin extends AlarmBasedTrigger {
                 lastCheckin = checkins.getJSONObject(0);
                 if (sinceId == null)
                     sinceId = lastCheckin.getString("id");
-                if (lastCheckin.getString("id").equals(sinceId))
+                if (lastCheckin.getString("id").equals(sinceId)) {
+                    trigger(atoomaService, ruleId, new ParameterBundle());
                     return;
-                else {
+                } else {
                     synchronized (sinceIds) {
                         sinceIds.put(ruleId, sinceId);
                     }
-                    trigger(ruleId, new ParameterBundle());
+                    trigger(atoomaService, ruleId, new ParameterBundle());
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

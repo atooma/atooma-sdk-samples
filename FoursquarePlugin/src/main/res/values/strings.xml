@@ -4,5 +4,6 @@
     <string name="module_name">Foursquare</string>
     <string name="tr_friends_checking">Friends checkins</string>
     <string name="authentication_parameter">Authentication</string>
+    <string name="atooma">Atooma</string>
 
 </resources>

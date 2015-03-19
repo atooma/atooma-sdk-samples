@@ -3,8 +3,8 @@ package com.atooma.plugin.atoomafoursquareplugin;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.atooma.plugin.atoomafrousquareplugin.R;
 import com.atooma.plugin.Module;
+import com.atooma.plugin.atoomafoursquareplugin.R;
 
 public class ATOOMAFOURSQUAREPLUGIN extends Module {
 
@@ -42,5 +42,4 @@ public class ATOOMAFOURSQUAREPLUGIN extends Module {
         else
             setAuthenticated(false, "");
     }
-
 }
