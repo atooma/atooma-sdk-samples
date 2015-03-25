@@ -2,7 +2,6 @@ package com.atooma.plugin.atoomafoursquareplugin;
 
 import android.content.Context;
 import android.os.RemoteException;
-import android.util.Log;
 
 import com.atooma.plugin.AlarmBasedTrigger;
 import com.atooma.plugin.ParameterBundle;
@@ -41,7 +40,6 @@ public class TR_FriendsCheckin extends AlarmBasedTrigger {
 
     @Override
     public void onTimeout(IAtoomaService atoomaService, String ruleId, ParameterBundle parameters) {
-        Log.v("ATOOMA", "onTimeout");
         String sinceId;
         synchronized (sinceIds) {
             sinceId = sinceIds.get(ruleId);
@@ -55,14 +53,11 @@ public class TR_FriendsCheckin extends AlarmBasedTrigger {
                 lastCheckin = checkins.getJSONObject(0);
                 if (sinceId == null)
                     sinceId = lastCheckin.getString("id");
-                if (lastCheckin.getString("id").equals(sinceId)) {
+                if (!lastCheckin.getString("id").equals(sinceId)) {
                     trigger(atoomaService, ruleId, new ParameterBundle());
-                    return;
-                } else {
-                    synchronized (sinceIds) {
-                        sinceIds.put(ruleId, sinceId);
-                    }
-                    trigger(atoomaService, ruleId, new ParameterBundle());
+                }
+                synchronized (sinceIds) {
+                    sinceIds.put(ruleId, sinceId);
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
