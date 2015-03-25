@@ -15,7 +15,9 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".PEBBLERegister" />
+        <service
+            android:name=".PEBBLERegister"
+            android:exported="true" />
     </application>
 
 </manifest>

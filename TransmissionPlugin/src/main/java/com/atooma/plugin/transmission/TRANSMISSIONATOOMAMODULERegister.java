@@ -1,11 +1,11 @@
 package com.atooma.plugin.transmission;
 
-import com.atooma.sdk.RegisterService;
 import com.atooma.plugin.Module;
+import com.atooma.sdk.AtoomaPluginService;
 
-public class TRANSMISSIONATOOMAMODULERegister extends RegisterService {
-	@Override
-	public Module getModuleInstance() {
-		return new TRANSMISSIONATOOMAMODULE(this, TRANSMISSIONATOOMAMODULE.MODULE_ID, TRANSMISSIONATOOMAMODULE.MODULE_VERSION);
-	}
+public class TRANSMISSIONATOOMAMODULERegister extends AtoomaPluginService {
+    @Override
+    public Module getModuleInstance() {
+        return new TRANSMISSIONATOOMAMODULE(this, TRANSMISSIONATOOMAMODULE.MODULE_ID, TRANSMISSIONATOOMAMODULE.MODULE_VERSION);
+    }
 }

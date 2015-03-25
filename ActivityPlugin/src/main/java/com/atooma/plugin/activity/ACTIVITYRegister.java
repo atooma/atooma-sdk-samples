@@ -1,9 +1,9 @@
 package com.atooma.plugin.activity;
 
 import com.atooma.plugin.IModulePlugin;
-import com.atooma.sdk.RegisterService;
+import com.atooma.sdk.AtoomaPluginService;
 
-public class ACTIVITYRegister extends RegisterService {
+public class ACTIVITYRegister extends AtoomaPluginService {
 
     @Override
     public IModulePlugin getModuleInstance() {

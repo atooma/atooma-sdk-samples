@@ -1,9 +1,9 @@
 package com.atooma.plugin.sphero;
 
-import com.atooma.sdk.RegisterService;
 import com.atooma.plugin.Module;
+import com.atooma.sdk.AtoomaPluginService;
 
-public class SPHERORegister extends RegisterService {
+public class SPHERORegister extends AtoomaPluginService {
 
     @Override
     public Module getModuleInstance() {

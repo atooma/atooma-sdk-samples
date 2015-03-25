@@ -6,6 +6,7 @@ import android.os.RemoteException;
 import com.atooma.plugin.AlarmBasedTrigger;
 import com.atooma.plugin.ParameterBundle;
 import com.atooma.plugin.Schedule;
+import com.atooma.sdk.IAtoomaService;
 
 public class TR_GetString extends AlarmBasedTrigger {
 
@@ -30,10 +31,10 @@ public class TR_GetString extends AlarmBasedTrigger {
     }
 
     @Override
-    public void onTimeout(String ruleId, ParameterBundle parameters) {
+    public void onTimeout(IAtoomaService atoomaService, String ruleId, ParameterBundle parameters) {
         //Here I can pass new values
         //but in this example I pass the values inserted by the user
-        trigger(ruleId, parameters);
+        trigger(atoomaService, ruleId, parameters);
     }
 
     @Override
