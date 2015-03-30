@@ -6,7 +6,6 @@ import android.os.RemoteException;
 import com.atooma.plugin.AlarmBasedTrigger;
 import com.atooma.plugin.ParameterBundle;
 import com.atooma.plugin.Schedule;
-import com.atooma.sdk.IAtoomaService;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -54,7 +53,7 @@ public class TR_DownloadRate extends AlarmBasedTrigger {
     }
 
     @Override
-    public void onTimeout(IAtoomaService atoomaService, String ruleId, ParameterBundle parameters) {
+    public void onTimeout(String ruleId, ParameterBundle parameters) {
         Double donwloadFilter = (Double) parameters.get("DOWNLOAD-RATE");
         String address = (String) parameters.get("ADDRESS");
 
@@ -102,7 +101,7 @@ public class TR_DownloadRate extends AlarmBasedTrigger {
         if (donwloadFilter == null || rateDownload > donwloadFilter) {
             ParameterBundle variables = new ParameterBundle();
             variables.put("DOWNLOAD-RATE", (double) rateDownload);
-            trigger(atoomaService, ruleId, variables);
+            trigger(ruleId, variables);
         }
     }
 

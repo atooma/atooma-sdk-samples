@@ -6,7 +6,6 @@ import android.os.RemoteException;
 import com.atooma.plugin.AlarmBasedTrigger;
 import com.atooma.plugin.ParameterBundle;
 import com.atooma.plugin.Schedule;
-import com.atooma.sdk.IAtoomaService;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,7 +38,7 @@ public class TR_FriendsCheckin extends AlarmBasedTrigger {
     }
 
     @Override
-    public void onTimeout(IAtoomaService atoomaService, String ruleId, ParameterBundle parameters) {
+    public void onTimeout(String ruleId, ParameterBundle parameters) {
         String sinceId;
         synchronized (sinceIds) {
             sinceId = sinceIds.get(ruleId);
@@ -54,7 +53,7 @@ public class TR_FriendsCheckin extends AlarmBasedTrigger {
                 if (sinceId == null)
                     sinceId = lastCheckin.getString("id");
                 if (!lastCheckin.getString("id").equals(sinceId)) {
-                    trigger(atoomaService, ruleId, new ParameterBundle());
+                    trigger(ruleId, new ParameterBundle());
                 }
                 synchronized (sinceIds) {
                     sinceIds.put(ruleId, sinceId);

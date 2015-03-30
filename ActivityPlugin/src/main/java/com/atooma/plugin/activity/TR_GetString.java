@@ -31,10 +31,10 @@ public class TR_GetString extends AlarmBasedTrigger {
     }
 
     @Override
-    public void onTimeout(IAtoomaService atoomaService, String ruleId, ParameterBundle parameters) {
+    public void onTimeout(String ruleId, ParameterBundle parameters) {
         //Here I can pass new values
         //but in this example I pass the values inserted by the user
-        trigger(atoomaService, ruleId, parameters);
+        trigger(ruleId, parameters);
     }
 
     @Override
