@@ -17,6 +17,6 @@ android {
     }
 }
 dependencies {
-    compile 'com.atooma:atooma-android-sdk:1.2.1@aar'
+    compile 'com.atooma:atooma-android-sdk:2.0@aar'
 }
 

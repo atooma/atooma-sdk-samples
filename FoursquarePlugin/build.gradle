@@ -1,21 +1,30 @@
 apply plugin: 'com.android.application'
 android {
+    signingConfigs {
+        config {
+            keyAlias 'atooma'
+            keyPassword '123456'
+            storeFile file('/home/monossido/ATOOMA/AppGithub/atooma-android-client/Builder/Atooma.ks')
+            storePassword '123456'
+        }
+    }
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
-
     defaultConfig {
-        applicationId "com.atooma.plugin.atoomafrousquareplugin"
+        applicationId "com.atooma.plugin.atoomafoursquareplugin"
         minSdkVersion 9
         targetSdkVersion 21
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+        debug {
+            signingConfig signingConfigs.config
+        }
     }
 }
 dependencies {
-    compile 'com.atooma:atooma-android-sdk:1.2.1@aar'
+    compile 'com.atooma:atooma-android-sdk:2.0@aar'
 }
